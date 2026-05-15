@@ -179,4 +179,36 @@ public class OrderServiceImpl implements OrderService {
         String json = JSONObject.toJSONString(map);
         webSocketServer.sendToAllClient(json);
     }
+
+
+
+
+
+
+
+    // 因为第9天的作业还尚未完成, 故这里没法用
+
+    /**
+     * 客户催单
+     * @param id
+     */
+    /*public void reminder(Long id) {
+        // 根据id查询订单
+        Orders ordersDB = orderMapper.getById(id);
+
+        // 校验订单是否存在
+        if (ordersDB == null) {
+            trhow new OrderBusinessException(MessageConstant.ORDER_STATUS_ERROR);
+        }
+
+        Map map = new HashMap();
+        map.put("type", 2);// 1表示来单提醒 2表示催单
+        map.put("orderId",ordersDB.getId());
+        map.put("content","订单号: "+ ordersDB.getNumber());
+
+        // 通过 websocket向客户端 浏览器推送消息
+        webSocketServer.sendToAllClient(JSON.toJSONString(map));
+    }*/
+
+
 }
