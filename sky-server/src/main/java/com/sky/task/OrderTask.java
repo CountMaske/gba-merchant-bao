@@ -20,8 +20,8 @@ public class OrderTask {
     /**
      * 处理超时订单的方法
      */
-//    @Scheduled(cron = "0 * * * * ? ") // 每分钟触发一次
-    @Scheduled(cron = "1/10 * * * * ? ")
+    @Scheduled(cron = "0 * * * * ? ") // 每分钟触发一次
+//    @Scheduled(cron = "1/10 * * * * ? ")
     public void processTimeoutOrder() {
         log.info("定时处理超时订单: {}", LocalDateTime.now());
 
@@ -43,8 +43,8 @@ public class OrderTask {
     /**
      * 处理一直牌派送中状态的订单
      */
-//    @Scheduled(cron = "0 0 1 * * ? ") // 每天凌晨1点触发一次
-    @Scheduled(cron = "0/10 * * * * ? ")
+    @Scheduled(cron = "0 0 1 * * ? ") // 每天凌晨1点触发一次
+//    @Scheduled(cron = "0/10 * * * * ? ")
     public void processDeliveryOrder() {
         log.info("定时处理处于派送中的订单: {}", LocalDateTime.now());
 
