@@ -110,5 +110,5 @@ public interface OrderService {
      * 客户催单
      * @param id
      */
-    /*void reminder(Long id);*/
+    void reminder(Long id);
 }

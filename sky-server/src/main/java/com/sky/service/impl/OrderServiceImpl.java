@@ -595,13 +595,13 @@ public class OrderServiceImpl implements OrderService {
      * 客户催单
      * @param id
      */
-    /*public void reminder(Long id) {
+    public void reminder(Long id) {
         // 根据id查询订单
         Orders ordersDB = orderMapper.getById(id);
 
         // 校验订单是否存在
         if (ordersDB == null) {
-            trhow new OrderBusinessException(MessageConstant.ORDER_STATUS_ERROR);
+            throw new OrderBusinessException(MessageConstant.ORDER_STATUS_ERROR);
         }
 
         Map map = new HashMap();
@@ -611,7 +611,7 @@ public class OrderServiceImpl implements OrderService {
 
         // 通过 websocket向客户端 浏览器推送消息
         webSocketServer.sendToAllClient(JSON.toJSONString(map));
-    }*/
+    }
 
 
 }
