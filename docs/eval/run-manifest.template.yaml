@@ -1,0 +1,53 @@
+# 每次量化运行复制本文件到 docs/eval/runs/<run-id>/run-manifest.yaml 后填写。
+# 不填写密钥、手机号、真实订单号、完整 Prompt 或其他敏感数据。
+run_id: "2026-10-01-rag-001"
+module: "rag" # rag | function-calling | rabbitmq | chat-memory
+purpose: "baseline" # baseline | optimized | regression | fault-injection
+commit: "填写git commit SHA"
+created_at: "2026-10-01T00:00:00+08:00"
+
+dataset:
+  name: "填写评测集名称"
+  version: "v1"
+  sample_count: 0
+
+model:
+  chat_model: "填写模型名或版本"
+  embedding_model: "填写Embedding模型；不涉及时写N/A"
+  prompt_version: "填写Prompt版本或commit"
+
+software:
+  java: ""
+  spring_boot: ""
+  langchain4j: ""
+  mysql: ""
+  redis: ""
+  rabbitmq: ""
+  milvus: ""
+
+machine:
+  os: ""
+  cpu: ""
+  memory_gb: 0
+  docker_desktop: ""
+
+load:
+  concurrency: 0
+  warmup_seconds: 0
+  duration_seconds: 0
+  rounds: 1
+
+tools:
+  api: "Apifox"
+  load_test: "JMeter; 不涉及时写N/A"
+  redis_gui: "Another Redis Desktop Manager"
+  milvus_gui: "Attu; 不涉及时写N/A"
+
+fault_injection: []
+metrics:
+  primary: []
+  notes: "填写分母、统计口径和失败分类"
+
+artifacts:
+  raw_result: "result.json 或 result.csv"
+  report: "report.md"
