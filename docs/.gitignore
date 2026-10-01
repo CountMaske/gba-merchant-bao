@@ -1,0 +1,33 @@
+
+# 不作为项目交付文档
+# 需求推导、旧方案和大段原始素材只保留在本地工作区
+/design/
+/initialization/*
+!/initialization/设计手稿.md
+
+# 每次量化的条件快照、原始结果和单次报告只保存在本机，不提交GitHub。
+# GitHub只提交 /eval/reports/ 下不含业务明细的聚合结论。
+/eval/results/
+/eval/raw/
+/eval/runs/
+/observability/raw/
+
+# 抓包、日志、数据库导出和本地临时分析可能包含手机号、Prompt、Token或真实订单。
+*.har
+*.log
+*.dump
+*.bak
+*.sql.gz
+/exports/
+/backups/
+/tmp/
+/drafts/
+
+# 本地密钥和开发机配置不得入库。
+*.local.yml
+*.local.yaml
+*.env
+*.pem
+*.key
+*secret*.json
+*credentials*.json

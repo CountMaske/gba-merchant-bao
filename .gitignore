@@ -1,1 +1,7 @@
-/Acquirement/
+
+# 非项目源码, 不提交
+.agents/
+skills-lock.json
+
+# OpenSpec 的临时工作产物和本地运行文件；正式 change/spec/config 仍可提交。
+openspec/changes/*/artifacts/
